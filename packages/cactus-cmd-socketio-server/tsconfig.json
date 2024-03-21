@@ -1,0 +1,30 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "composite": true,
+    "outDir": "./dist/",
+    "tsBuildInfoFile": "../../.build-cache/cactus-cmd-socketio-server.tsbuildinfo",
+  },
+  "include": [
+    "./src/main/typescript/business-logic-plugin/*.ts",
+    "./config/*.ts",
+    "./src/main/typescript/*.ts",
+    "./src/main/typescript/verifier/*.ts",
+    "./src/main/typescript/util/*.ts",
+    "./src/main/typescript/routing-interface/**/*.ts"
+  ],
+  "exclude": [
+    "copyStaticAssets.ts"
+  ],
+  "references": [
+    {
+      "path": "../cactus-common/tsconfig.json"
+    },
+    {
+      "path": "../cactus-core-api/tsconfig.json"
+    },
+    {
+      "path": "../cactus-test-tooling/tsconfig.json"
+    }
+  ]
+}

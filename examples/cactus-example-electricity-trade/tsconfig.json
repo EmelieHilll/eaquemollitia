@@ -1,0 +1,17 @@
+{
+  "extends": "../../tsconfig.base.json",
+  "compilerOptions": {
+    "composite": true,
+    "outDir": "./dist/",
+    "tsBuildInfoFile": "../../.build-cache/cactus-example-electricity-trade.tsbuildinfo"
+  },
+  "include": ["./*.ts"],
+  "references": [
+    {
+      "path": "../../packages/cactus-cmd-socketio-server/tsconfig.json"
+    },
+    {
+      "path": "../../packages/cactus-verifier-client/tsconfig.json"
+    }
+  ]
+}
